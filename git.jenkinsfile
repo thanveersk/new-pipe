@@ -8,6 +8,22 @@ pipeline{
                   git 'https://github.com/web3j/sample-project-maven.git'
               }
           }
+          stage('validation'){
+           steps{
+               sh '''
+              mvn validate
+
+               '''
+           }
+          }
+          stage('test'){
+              steps{
+                  sh '''
+                   mvn test
+
+                  '''
+              }
+          }
       }
     
 }
