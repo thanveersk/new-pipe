@@ -1,0 +1,13 @@
+pipeline{
+
+    agent any
+
+      stages {
+          stage('git checkout'){
+              steps{
+                  git 'https://github.com/web3j/sample-project-maven.git'
+              }
+          }
+      }
+    
+}
