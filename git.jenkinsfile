@@ -24,6 +24,18 @@ pipeline{
                   '''
               }
           }
+             stage("sonarqube analysis "){
+            steps{
+                withSonarQubeEnv('sonarcube'){
+
+                sh '''
+              mvn sonar:sonar \
+            -Dsonar.projectKey=scb \
+           -Dsonar.host.url=http://13.59.31.130:9000 \
+           -Dsonar.login=1da4c1d0adae2dd6b25ba3ee6eef86ef290287f6
+           
       }
-    
-}
+      
+    }
+}    
+  
