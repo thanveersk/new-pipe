@@ -38,6 +38,16 @@ pipeline{
                  }
             }
         }
+        stage('pACK'){
+           steps{
+             sh'''
+                mvn package
+              
+             '''
+           
+           }
+        
+        }
     }
 }             
 
