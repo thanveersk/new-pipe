@@ -5,7 +5,7 @@ pipeline{
       stages {
           stage('git checkout'){
               steps{
-                  git 'https://github.com/gabrielf/maven-samples.git'
+                  git 'https://github.com/jleetutorial/maven-project.git'
               }
           }
           stage('validation'){
